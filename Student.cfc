@@ -8,7 +8,7 @@
 
         <cfset var result = "">
         <cftry>
-            <cfquery datasource="YourDSN">
+            <cfquery datasource="MyMax">
                 INSERT INTO tStudent (sFirstName, sLastName, sEmail, sPassword)
                 VALUES (
                     <cfqueryparam value="#sFirstName#" cfsqltype="cf_sql_varchar">,
@@ -31,7 +31,7 @@
         <cfargument name="sPassword" type="string" required="true">
 
         <cfset var userData = "">
-        <cfquery name="userData" datasource="YourDSN">
+        <cfquery name="userData" datasource="MyMax">
             SELECT sID, sFirstName, sLastName, sEmail, dCreatedAt
             FROM tStudent
             WHERE sEmail = <cfqueryparam value="#sEmail#" cfsqltype="cf_sql_varchar">

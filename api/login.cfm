@@ -1,4 +1,6 @@
 <cfheader name="Access-Control-Allow-Origin" value="*" />
+<cfheader name="Access-Control-Allow-Methods" value="POST, GET, OPTIONS" />
+<cfheader name="Access-Control-Allow-Headers" value="Content-Type" />
 <cfcontent type="application/json" />
 
 <cftry>
